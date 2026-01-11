@@ -1,0 +1,16 @@
+//こちらには基本設定となるスタイルやjsファイルでコントロールするcssの指定をまとめます
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    //設定したかったら後からこれ使いな！aspect-ratio: 4 / 3;
+    &.c-contain {
+        object-fit: contain;
+    }
+}
+.c-none {
+    display: none !important; //splashの表示を消す
+}
+.c-wrap {
+    display: none; //chromeのバグ防止一瞬表示されるのを防止
+}
