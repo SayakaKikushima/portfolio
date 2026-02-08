@@ -1,0 +1,904 @@
+@use "../00_global" as v;
+//全ページのレイアウトにまつわる設定はこちらに記述
+//header.footer.は特にここに書くこと
+//たくさん同じ記述をすることが多くなってきたパーツについてはコンポーネントに移動させる
+body {
+    background: v.$bg_col;
+    color: v.$main_col;
+}
+
+.l-header {
+    background: var(--nav-color, linear-gradient(5deg, #e1e1de 0%, #f0f0ee 58.18%, #f0f0ee 98.42%));
+    width: 100dvw;
+    position: relative;
+    @include v.mq(m) {
+        width: 80dvw;
+    }
+    &_top {
+        @extend .l-header;
+        background: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9996;
+        margin: 20dvh 0 0;
+        @include v.mq(m) {
+            margin: 16dvh 0 0;
+            left: 16dvw;
+        }
+        .l-header_top_container {
+            @include v.mq(m) {
+                margin: 0;
+            }
+        }
+    }
+    &_lower {
+        @extend .l-header;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        z-index: 9995;
+        &-profile {
+            @extend .l-header_lower;
+            background: transparent;
+        }
+    }
+}
+
+//scroll css
+.l-header_scroll {
+    width: 100%;
+    height: 95%;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1100;
+        width: 100%;
+        height: 100vh;
+        /*背景画像設定*/
+        //background: transparent;
+        background-size: cover;
+    }
+}
+
+/*Scrollテキストの描写*/
+.scrolldown2 {
+    /*描画位置※位置は適宜調整してください*/
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    bottom: -20px;
+    right: 50%;
+    z-index: 1100;
+    span {
+        /*描画位置*/
+        position: absolute;
+        left: 1.5rem;
+        bottom: 1rem;
+        /*テキストの形状*/
+        color: rgba(v.$main_col, 0.6);
+        font-size: 1rem;
+        letter-spacing: 0.25em;
+        text-align: end;
+        /*縦書き設定*/
+        -ms-writing-mode: tb-rl;
+        //writing-mode: vertical-rl;
+        z-index: 1100;
+        animation: fade-2 2.5s ease-out infinite;
+        @include v.mq(ml) {
+            font-size: 1.15rem;
+        }
+    }
+    ::before {
+        content: "";
+        display: block;
+        border-bottom: 2px solid rgba(v.$main_col, 0.6);
+        border-right: 2px solid rgba(v.$main_col, 0.6);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 1rem;
+        left: 1.15rem;
+        margin: 0.25rem;
+    }
+}
+.thanks_comment {
+    width: 16rem;
+    height: auto;
+    z-index: 1100;
+    position: absolute;
+    left: 1.5rem;
+    bottom: 0;
+    /*テキストの形状*/
+    color: rgba(v.$main_col, 0.3);
+    font-size: 1rem;
+    letter-spacing: 0.25em;
+    @include v.mq(ml) {
+        width: 600px;
+    }
+}
+
+header > .c-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include v.mq(m) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    &_lower {
+        @extend .c-inner;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    //width: 100dvw;
+    //height: 100dvh;
+    .l-kv-logo_container {
+        width: 40vw;
+        height: auto;
+        position: absolute;
+        top: 30dvh;
+        opacity: 0.4;
+
+        @include v.mq(m) {
+            width: 24dvw;
+            top: 20dvh;
+            right: 10dvw;
+        }
+        @include v.mq(l) {
+            right: 7dvw;
+        }
+        @include v.mq(xl) {
+            right: 5dvw;
+        }
+        @include v.mq(xxl) {
+            right: -8dvw;
+        }
+        @include v.mq(xxxl) {
+            right: -16dvw;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            //margin: 0 calc(80% - 50vw);
+        }
+    }
+}
+.l-nav {
+    &_top {
+        position: fixed;
+        top: 0;
+        right: -100dvw;
+        width: 100%; //100dvw;
+        height: auto; //100dvh;
+        opacity: 0;
+        background: linear-gradient(180deg, #f5f5f5 19.27%, #d9d9d9 100%);
+        z-index: 9999 !important;
+        //transform-origin: right;
+        opacity: 0;
+        transition: all 0.35s ease-out;
+        //animation: fade 1s ease-in both;
+        &.open {
+            right: 0%; //0dvw;;
+            opacity: 1;
+        }
+        @include v.mq(m) {
+            position: absolute;
+            top: 42dvh;
+            left: 0;
+            margin-left: 16dvw;
+            width: 200px;
+            height: 200px;
+            background: transparent;
+            z-index: 10000 !important;
+            opacity: 1;
+        }
+        @include v.mq(ml) {
+            top: 38dvh;
+        }
+        @include v.mq(l) {
+            top: 40dvh;
+        }
+        @include v.mq(xl) {
+            top: 42dvh;
+        }
+        @include v.mq(xl) {
+        }
+        .l-glb_nav {
+            height: calc(100dvh - 8.5rem);
+            margin-top: 10rem;
+            @include v.mq(m) {
+                width: 200px;
+                height: 200px;
+                margin: 0;
+            }
+            li {
+                width: 92%;
+                height: 6rem;
+                position: relative;
+                margin: 0 auto;
+                img {
+                    width: 1.75rem;
+                    height: 1.75rem;
+                    margin: 0 0.25rem;
+                }
+                @include v.mq(m) {
+                    flex: 1 1 0;
+                    height: auto;
+                    border: none;
+                    border-left: 1px solid v.$main_col;
+                }
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: v.$main_col;
+                    transition: 0.3s ease-out;
+                    position: relative;
+                    font-size: 1.75rem;
+                    font-weight: 200;
+                    @include v.mq(m) {
+                        justify-content: flex-start;
+                        font-size: 1.75rem;
+                        padding: 1rem 0;
+                        padding-left: 2rem;
+                        text-align: start;
+                    }
+                    @include v.mq(m) {
+                        color: v.$main_col;
+                        &:hover {
+                            color: v.$accent_col;
+                            animation: prev 1s ease-in;
+                            //transition: 0.4s 0s ease-in;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_lower {
+        position: fixed;
+        top: 0;
+        right: -100dvw;
+        width: 100%; //100dvw;
+        height: auto; //100dvh;
+        opacity: 0;
+        background: linear-gradient(180deg, #f5f5f5 19.27%, #d9d9d9 100%);
+        z-index: 9999 !important;
+        //transform-origin: right;
+        opacity: 0;
+        transition: all 0.35s ease-out;
+        //animation: fade 1s ease-in both;
+        &.open {
+            right: 0%; //0dvw;;
+            opacity: 1;
+        }
+        @include v.mq(m) {
+            position: absolute;
+            top: 0;
+            right: 1rem;
+            width: 30dvw;
+            height: 80px;
+            background: transparent;
+            z-index: 9999 !important;
+            opacity: 1;
+        }
+        @include v.mq(l) {
+            right: 1rem;
+            width: 24dvw;
+        }
+        .l-glb_nav {
+            height: calc(100dvh - 8.5rem);
+            margin-top: 10rem;
+            @include v.mq(m) {
+                height: 80px;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            li {
+                width: 70%;
+                height: 6rem;
+                position: relative;
+                margin: 0 auto;
+                img {
+                    width: 1.75rem;
+                    height: 1.75rem;
+                    margin: 0 0.25rem;
+                }
+                @include v.mq(m) {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                }
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: v.$main_col;
+                    transition: 0.3s ease-out;
+                    position: relative;
+                    font-size: 1.75rem;
+                    font-weight: 200;
+                    @include v.mq(m) {
+                        font-size: 1.25rem;
+                        font-weight: 200;
+                        text-align: center;
+                    }
+                    &:hover {
+                        color: v.$main_col;
+                        transition: 0.4s 0s ease-in;
+                    }
+                    @include v.mq(m) {
+                        color: v.$main_col;
+                        &:hover {
+                            color: v.$accent_col;
+                            transition: 0.4s 0s ease-in;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_lower_lower {
+        position: fixed;
+        top: 0;
+        right: -100dvw;
+        width: 100%; //100dvw;
+        height: auto; //100dvh;
+        opacity: 0;
+        background: linear-gradient(180deg, #f5f5f5 19.27%, #d9d9d9 100%);
+        z-index: 9999 !important;
+        //transform-origin: right;
+        opacity: 0;
+        transition: all 0.35s ease-out;
+        //animation: fade 1s ease-in both;
+        &.open {
+            right: 0%; //0dvw;;
+            opacity: 1;
+        }
+        @include v.mq(ml) {
+            position: absolute;
+            top: 0;
+            right: 1rem;
+            width: 30dvw;
+            height: 80px;
+            background: transparent;
+            z-index: 9999 !important;
+            opacity: 1;
+        }
+        @include v.mq(l) {
+            right: 1rem;
+            width: 24dvw;
+        }
+        .l-glb_nav {
+            height: calc(100dvh - 8.5rem);
+            margin-top: 10rem;
+            @include v.mq(ml) {
+                height: 80px;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            li {
+                width: 70%;
+                height: 6rem;
+                position: relative;
+                margin: 0 auto;
+                img {
+                    width: 1.75rem;
+                    height: 1.75rem;
+                    margin: 0 0.25rem;
+                }
+                @include v.mq(ml) {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                }
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: v.$main_col;
+                    transition: 0.3s ease-out;
+                    position: relative;
+                    font-size: 1.75rem;
+                    font-weight: 200;
+                    @include v.mq(ml) {
+                        font-size: 1.25rem;
+                        font-weight: 200;
+                        text-align: center;
+                    }
+                    &:hover {
+                        color: v.$main_col;
+                        transition: 0.4s 0s ease-in;
+                    }
+                    @include v.mq(ml) {
+                        color: v.$main_col;
+                        &:hover {
+                            color: v.$accent_col;
+                            transition: 0.4s 0s ease-in;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.l-kv {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    right: 0;
+    &_profile {
+        @extend .l-kv;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    .l-kv-photo-container {
+        height: 100dvh;
+        width: 100dvw;
+        position: relative;
+        //animation: slider 10s linear infinite;*/
+        .l-kv-photo {
+            position: relative;
+            //height: 100dvh;
+            img {
+                width: auto;
+                z-index: 998;
+            }
+        }
+    }
+    /*width: 100%;
+    height: 80dvh;
+    background: url(../img/kv.png) no-repeat center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: -10;*/
+}
+main {
+    //padding: 1rem;
+    overflow-x: hidden; //アニメーションの横スクロールを避けるため
+}
+
+.works_caption {
+    font-size: 1rem;
+    &_lower {
+        @extend .works_caption;
+        text-align: right;
+        font-size: 0.75rem;
+        padding-right: 2rem;
+        letter-spacing: 1.2px;
+        @include v.mq(m) {
+            font-size: 0.95rem;
+        }
+    }
+    &_link {
+        text-decoration: underline;
+        &:hover {
+            color: v.$accent_col;
+            transition: 0.3s ease-out;
+        }
+    }
+}
+
+.works_details_fv_container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100dvw;
+    height: 100%;
+    .works_details_photo_container {
+        cursor: pointer;
+        margin-bottom: 1rem;
+        position: relative;
+        img {
+            aspect-ratio: 1/1.45;
+            @include v.mq(ml) {
+                aspect-ratio: 3 /2.5;
+            }
+            @include v.mq(m-ml) {
+                aspect-ratio: 3 /2.15;
+            }
+            @include v.mq(l) {
+                aspect-ratio: 3 /1.75;
+            }
+            @include v.mq(xl) {
+                aspect-ratio: 3 /1.7;
+            }
+            @include v.mq(xxl) {
+                aspect-ratio: 3 / 1.45;
+            }
+        }
+        .fv_sp {
+            @include v.mq(ml) {
+                display: none;
+            }
+        }
+        .fv_pc {
+            @include v.mq(trigger) {
+                display: none;
+            }
+        }
+        .works_details {
+            &_prev {
+                width: 3rem;
+                height: 3rem;
+                background: v.$wh;
+                border-radius: 9999px;
+                position: absolute;
+                bottom: 5dvh;
+                left: 1rem;
+                filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.25));
+                @include v.mq(ml) {
+                    bottom: calc(50dvh - 80px);
+                    left: 1.5rem;
+                }
+                &::before {
+                    content: "";
+                    display: block;
+                    border-bottom: 2px solid v.$main_col;
+                    border-left: 2px solid v.$main_col;
+                    transform: rotate(45deg);
+                    width: 1rem;
+                    height: 1rem;
+                    position: absolute;
+                    top: 1rem;
+                    left: 1.15rem;
+                }
+            }
+            &_next {
+                width: 3rem;
+                height: 3rem;
+                background: v.$wh;
+                border-radius: 9999px;
+                position: absolute;
+                bottom: 5dvh;
+                right: 1rem;
+                filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+                @include v.mq(ml) {
+                    bottom: calc(50dvh - 80px);
+                    right: 1.5rem;
+                }
+                &::before {
+                    content: "";
+                    display: block;
+                    border-top: 2px solid v.$main_col;
+                    border-right: 2px solid v.$main_col;
+                    transform: rotate(45deg);
+                    width: 1rem;
+                    height: 1rem;
+                    position: absolute;
+                    top: 1rem;
+                    right: 1.15rem;
+                }
+                // &:hover {
+                //     animation: prev-next 1s linear;
+                //     border-bottom: 1.5px solid v.$accent_col;
+                //     border-left: 1.5px solid v.$accent_col;
+                // }
+            }
+        }
+    }
+}
+.l-works {
+    @include v.mq(m) {
+        margin: 60px 0 100px 0;
+    }
+    &_details {
+        @extend .l-works;
+        margin: 0rem 1.5rem;
+        @include v.mq(m) {
+            margin: 0rem 3rem;
+        }
+        @include v.mq(xxxl) {
+            margin: 0rem 3rem;
+        }
+    }
+    .bg-illust {
+        width: 10rem;
+        height: auto;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        opacity: 0.1;
+        z-index: -1;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    dl {
+        display: block;
+        position: relative;
+        dt {
+            margin: 40px 0 0.35rem 0;
+            font-size: 1.25rem;
+            @include v.mq(ml) {
+                margin: 60px 0 0.35rem 0;
+                font-size: 1.25rem;
+            }
+            border-left: 1px v.$main_col solid;
+            display: inline-flex;
+            padding: 0.15rem 0.75rem;
+            &:nth-child(1) {
+                margin: 0rem 0 0.35rem 0;
+            }
+        }
+        dd {
+            font-size: 14px;
+            margin-top: 0.25rem;
+            //letter-spacing: 0.05rem;
+            line-height: 22px;
+            @include v.mq(m) {
+                font-size: 1rem;
+                line-height: 30px;
+            }
+            &:last-child {
+                margin-bottom: 40px;
+                @include v.mq(ml) {
+                    margin-bottom: 60px;
+                }
+            }
+        }
+        .concept_txt {
+            font-size: 1.25rem;
+            text-align: center;
+            font-weight: 600;
+            padding-top: 0.5rem;
+            @include v.mq(ml) {
+                font-size: 1.5rem;
+            }
+        }
+        ul {
+            li {
+                margin-top: 0.75rem;
+                //margin-bottom: 2rem;
+                letter-spacing: 0.05rem;
+                line-height: 20px;
+                &:nth-child(1) {
+                    margin-top: 0.25rem;
+                }
+            }
+        }
+        .works_app_container {
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            position: absolute;
+            top: -0.15rem;
+            left: 9.5rem;
+            @include v.mq(m) {
+                top: -0.25rem;
+                left: 10rem;
+            }
+            img {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+    .l-works_details_container {
+        display: block;
+        @include v.mq(ml) {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+    }
+
+    .works_photo_container {
+        overflow: hidden;
+        position: relative;
+        aspect-ratio: 4 / 3;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        .mask {
+            width: 100%;
+            height: 100%;
+            position: absolute; /* 絶対位置指定 */
+            top: 0;
+            left: 0;
+            opacity: 0; /* マスクを表示しない */
+            background-color: rgba(0, 0, 0, 0.6); /* マスクは半透明 */
+            transition: all 0.2s ease;
+            a {
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                .caption {
+                    p {
+                        position: absolute;
+                        bottom: 8%;
+                        left: 0;
+                        font-size: 1.15rem;
+                        color: #fff;
+                        padding: 0 1.5rem;
+                        @include v.mq(ml) {
+                            font-size: 1.25rem;
+                        }
+
+                        span {
+                            //position: absolute;
+                            //top: 75%;
+                            //left: 8%;
+                            font-size: 0.8rem;
+                            @include v.mq(ml) {
+                                font-size: 0.9rem;
+                            }
+                        }
+                        //font-size: 130%;
+                        //text-align: center;
+                        //spadding-top: 80px;
+                    }
+                }
+            }
+            &:hover {
+                opacity: 1; /* マスクを表示する */
+            }
+        }
+    }
+    .works_txt_container {
+        display: block;
+        &:hover {
+            color: v.$accent_col;
+        }
+        &_lower {
+            @extend .works_txt_container;
+            margin: 1rem 0 0 0;
+            &:hover {
+                color: v.$main_col;
+            }
+            @include v.mq(m) {
+                margin: 1.5rem 0 0 0;
+            }
+            @include v.mq(xl) {
+                margin: 2.5rem 0 0 0;
+            }
+        }
+    }
+
+    .l-works_product {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        &:last-child {
+            margin-bottom: 40px;
+            @include v.mq(ml) {
+                margin-bottom: 60px;
+            }
+        }
+        figcaption {
+            padding-top: 0.35rem;
+            font-size: 12px;
+            color: v.$main_col;
+            text-align: start;
+            @include v.mq(ml) {
+                padding-top: 0.45rem;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.l-logocaption {
+    margin: 0 auto;
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+        color: v.$hover_before;
+        margin-bottom: 4rem;
+        @include v.mq(ml) {
+            text-align: left;
+        }
+    }
+    .my-logo_container {
+        @include v.mq(ml) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .my-logo {
+        width: 50dvw;
+        height: auto;
+        padding-bottom: 4rem;
+        margin: 0 auto;
+        @include v.mq(ml) {
+            width: 20dvw;
+        }
+    }
+    ul {
+        @include v.mq(ml) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 2rem;
+        }
+        li {
+            font-size: 1rem;
+            text-align: justify;
+            margin: 0 auto;
+        }
+    }
+}
+.l-contact {
+    position: relative;
+
+    @include v.mq(m) {
+        margin: 60px 0 200px 0;
+    }
+    p {
+        margin: 1.5rem 2rem 0rem 2rem !important;
+        @include v.mq(m) {
+            margin: 3rem 2rem 0rem 2rem !important;
+        }
+    }
+    .bg-illust {
+        width: 10rem;
+        height: auto;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        opacity: 0.1;
+        z-index: -1;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    p {
+        line-height: 1.5rem;
+    }
+}
+
+.l-works-fv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include v.mq(ml) {
+        flex-direction: row;
+    }
+}
