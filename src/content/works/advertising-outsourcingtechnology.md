@@ -14,7 +14,7 @@ fv:
   spAlt: 株式会社アウトソーシングテクノロジー様バナーsp
   pc: /img/outsourcing/outsourcingtechnology_banner_sp_pc.png
   pcAlt: 株式会社アウトソーシングテクノロジー様バナーpc
-caption: Client：株式会社アウトソーシングテクノロジー様
+caption: Client:株式会社アウトソーシングテクノロジー様
 apps:
 - figma
 - ai
@@ -31,7 +31,7 @@ info:
     IT、エンジニア未経験の文系大学生向け
     業界未経験でエンジニアを目指す求職者向け
 details:
-- text: アウトソーシングテクノロジーさまのグラデーションカラーを用いることによりVIを意識したクリエイティブ制作を行いました。
+- text: アウトソーシングテクノロジー様のグラデーションカラーを用いることによりVIを意識したクリエイティブ制作を行いました。
 - text: イラストや背景の幾何学模様を使用することでITへのハードルを下げ、親しみを抱くようなトーン&マナーになるよう意識しました。
 - image: /img/outsourcing/outsourcingtechnology_banner_detail.png
   alt: 株式会社アウトソーシングテクノロジー様会社説明会バナー

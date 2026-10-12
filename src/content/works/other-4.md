@@ -27,7 +27,7 @@ infoHtml: |-
   </div>
   </dd>
   <dt class="u-txtlp24">Works area</dt>
-  <dd class="u-txtlp12">企画、コンセプト設計、ラフ、パッケージ制作
+  <dd class="u-txtlp12">企画、コンセプト設計、ラフ、誌面制作
                                   </dd>
   <dt class="u-txtlp24">Target</dt>
   <dd class="u-txtlp12">40代ファミリー層のママさん向け

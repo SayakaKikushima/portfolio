@@ -7,7 +7,7 @@ urlName: basuto
 order: 50
 thumbnail: /img/okinawa/okinawa.png
 thumbnailAlt: わった〜バス党インスタグラムフォトコンテストの投稿用バナーの写真
-cardLead: 沖縄県わった～バス党実行委員会
+cardLead: 沖縄県わった〜バス党実行委員会
 cardTitle: インスタグラムフォトコンテスト
 fv:
   sp: /img/okinawa/okinawa_sp_pc.png
