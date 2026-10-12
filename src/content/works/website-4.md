@@ -43,23 +43,23 @@ infoHtml: |-
 ---
 <dl class="l-works-product_presentation">
 <figure class="l-m24px-0">
-<img alt="ユニゾンテクノロジー様求人媒体のアイキャッチ1" src="/img/unison-eyecatching/owned-eyecatching-1.jpg"/>
+<img alt="ユニゾンテクノロジー様オウンドメディアのアイキャッチ1" src="/img/unison-eyecatching/owned-eyecatching-1.jpg"/>
 <figcaption></figcaption>
 </figure>
 <figure class="l-m24px-0">
-<img alt="ユニゾンテクノロジー様求人媒体のアイキャッチ2" src="/img/unison-eyecatching/owned-eyecatching-2.jpg"/>
+<img alt="ユニゾンテクノロジー様オウンドメディアのアイキャッチ2" src="/img/unison-eyecatching/owned-eyecatching-2.jpg"/>
 <figcaption></figcaption>
 </figure>
 <figure class="l-m24px-0">
-<img alt="ユニゾンテクノロジー様求人媒体のアイキャッチ3" src="/img/unison-eyecatching/owned-eyecatching-3.jpg"/>
+<img alt="ユニゾンテクノロジー様オウンドメディアのアイキャッチ3" src="/img/unison-eyecatching/owned-eyecatching-3.jpg"/>
 <figcaption></figcaption>
 </figure>
 <figure class="l-m24px-0">
-<img alt="ユニゾンテクノロジー様求人媒体のアイキャッチ4" src="/img/unison-eyecatching/owned-eyecatching-4.jpg"/>
+<img alt="ユニゾンテクノロジー様オウンドメディアのアイキャッチ4" src="/img/unison-eyecatching/owned-eyecatching-4.jpg"/>
 <figcaption></figcaption>
 </figure>
 <figure class="l-m24px-0">
-<img alt="ユニゾンテクノロジー様求人媒体のアイキャッチ5" src="/img/unison-eyecatching/owned-eyecatching-5.jpg"/>
+<img alt="ユニゾンテクノロジー様オウンドメディアのアイキャッチ5" src="/img/unison-eyecatching/owned-eyecatching-5.jpg"/>
 <figcaption></figcaption>
 </figure>
 </dl>

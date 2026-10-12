@@ -9,9 +9,9 @@ cardLead: 株式会社シマダ様
 cardTitle: 公式サイトリニューアル
 fv:
   sp: /img/shimada/shimada_site_sp_pc.png
-  spAlt: Portfolio site Sayaka Kikushima-sp
+  spAlt: 株式会社シマダ様公式サイトリニューアル-sp
   pc: /img/shimada/shimada_site_sp_pc.png
-  pcAlt: Portfolio site Sayaka Kikushima-pc
+  pcAlt: 株式会社シマダ様公式サイトリニューアル-pc
 caption: |-
   株式会社シマダ様
   <a class="works_caption_link" href="https://www.kk-smd.co.jp/">https://www.kk-smd.co.jp/</a>
@@ -40,7 +40,7 @@ infoHtml: |-
   <ul>
   <li>以前のサイトより図やイラストを増やし感覚的に事業内容が伝わりやすいコンテンツに変更しました。</li>
   <li>実際に働く写真にみなさんのインタビュー記事を追加し、ユーザーが実際に働く姿を想像しやすくする狙いを込めました。</li>
-  <li>シンプルはデザインからブランドアイデンティティを保つ観点から現行のロゴデザインにさわせた配色やあしらいを取り入れたデザインにしました。</li>
+  <li>シンプルなデザインからブランドアイデンティティを保つ観点から現行のロゴデザインに合わせた配色やあしらいを取り入れたデザインにしました。</li>
   </ul>
   </dd>
   <figure class="l-works_product_container l-m24px-0">

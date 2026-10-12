@@ -54,11 +54,11 @@ infoHtml: |-
 <figcaption></figcaption>
 </figure>
 <figure class="l-works_product l-m24px-0">
-<img alt="マレージアの紙面1" src="/img/goodlife/a4-malaysia1.jpg"/>
+<img alt="マレーシアの紙面1" src="/img/goodlife/a4-malaysia1.jpg"/>
 <figcaption></figcaption>
 </figure>
 <figure class="l-works_product l-m24px-0">
-<img alt="マレージアの紙面2" src="/img/goodlife/a4-malaysia2.jpg"/>
+<img alt="マレーシアの紙面2" src="/img/goodlife/a4-malaysia2.jpg"/>
 <figcaption></figcaption>
 </figure>
 <figure class="l-works_product l-m24px-0">

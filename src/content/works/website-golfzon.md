@@ -32,7 +32,7 @@ infoHtml: |-
                                       、ワイヤーフレーム制作、デザインカンプ制作、FV動画制作
                                   </dd>
   <dt class="u-txtlp24">Outline</dt>
-  <dd class="u-txtlp12">シミュレーションゴルフ機会を製造販売するGOLFZON Japan
+  <dd class="u-txtlp12">シミュレーションゴルフ機器を製造販売するGOLFZON Japan
                                       株式会社様のサイトリニューアルを目的としたサイト制作を行いました。
                                       <br/>流入元:オーガニック検索
                                   <dt class="u-txtlp24">Design details</dt>
