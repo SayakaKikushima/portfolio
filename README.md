@@ -46,3 +46,19 @@ npm run build    # 公開用のファイルを dist/ に作る
 ## Googleタグマネージャー
 
 `src/components/Gtm.astro` の `GTM_ID` に `GTM-XXXXXXX` を入れると、全ページの `<head>` に入ります。
+
+## 検索エンジンに載せない設定
+
+全ページに `noindex` を入れています（`src/components/Noindex.astro`）。Cloudflare Pages では、画像なども含めて `public/_headers` で同じ指定をしています。検索結果に出してもよくなったら、この2か所を削除してください。
+
+## Cloudflare Pages で公開する
+
+このプロジェクトは GitHub Pages と Cloudflare Pages のどちらでもビルドできます。Cloudflare Pages ではビルド時に `CF_PAGES=1` が自動で設定され、URLの前につくパスが `/portfolio` から `/` に自動で切り替わります。
+
+Cloudflare 側の設定値：
+
+| 項目 | 値 |
+|---|---|
+| Framework preset | Astro |
+| Build command | `npm run build` |
+| Build output directory | `dist` |
