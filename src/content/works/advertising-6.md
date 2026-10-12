@@ -1,12 +1,12 @@
 ---
-title: NIKKA Cidre 新聞広告
+title: NIKKA Cidre　新聞広告
 category: advertising
 urlName: '6'
 order: 120
 thumbnail: /img/apple-ad/apple-ad-mockup.jpg
 thumbnailAlt: シードル新聞広告
 cardLead: ''
-cardTitle: NIKKA Cidre 新聞広告
+cardTitle: NIKKA Cidre　新聞広告
 fv:
   image: /img/apple-ad/apple-ad-mockup.jpg
   imageAlt: シードル新聞広告
