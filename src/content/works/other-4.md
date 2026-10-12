@@ -27,7 +27,7 @@ infoHtml: |-
   </div>
   </dd>
   <dt class="u-txtlp24">Works area</dt>
-  <dd class="u-txtlp12">企画、コンセプト設計、ラフ、パッケージ制作
+  <dd class="u-txtlp12">企画、コンセプト設計、ラフ、誌面制作
                                   </dd>
   <dt class="u-txtlp24">Target</dt>
   <dd class="u-txtlp12">40代ファミリー層のママさん向け
@@ -54,11 +54,11 @@ infoHtml: |-
 <figcaption></figcaption>
 </figure>
 <figure class="l-works_product l-m24px-0">
-<img alt="マレージアの紙面1" src="/img/goodlife/a4-malaysia1.jpg"/>
+<img alt="マレーシアの紙面1" src="/img/goodlife/a4-malaysia1.jpg"/>
 <figcaption></figcaption>
 </figure>
 <figure class="l-works_product l-m24px-0">
-<img alt="マレージアの紙面2" src="/img/goodlife/a4-malaysia2.jpg"/>
+<img alt="マレーシアの紙面2" src="/img/goodlife/a4-malaysia2.jpg"/>
 <figcaption></figcaption>
 </figure>
 <figure class="l-works_product l-m24px-0">

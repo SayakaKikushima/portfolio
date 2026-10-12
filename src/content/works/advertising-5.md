@@ -29,7 +29,7 @@ infoHtml: |-
   <dd class="u-txtlp12">架空商品とキャッチコピーを題材とした広告制作の課題を行いました。
                                   </dd>
   <dt class="u-txtlp24">Target</dt>
-  <dd class="u-txtlp12">３０代男性<br/>お酒を好んで飲む、味よりもパッケージやブランドのイメージで購入する傾向がある
+  <dd class="u-txtlp12">30代男性<br/>お酒を好んで飲む、味よりもパッケージやブランドのイメージで購入する傾向がある
                                   </dd>
   <dt class="u-txtlp24">Design details</dt>
   <div class="l-works_product l-m12px-0">

@@ -27,7 +27,7 @@ infoHtml: |-
                                   </dd>
   <dt class="u-txtlp24">Outline / Target</dt>
   <dd class="u-txtlp12">
-                                      メインターゲット：３０代女性<br/>お酒が弱く日本酒を好んで飲まない女性<br/>
+                                      メインターゲット：30代女性<br/>お酒が弱く日本酒を好んで飲まない女性<br/>
                                       抵抗感なく本格的な日本酒を飲んでもらうための商品企画及び広告制作を行いました。
                                   </dd>
   <figure class="l-works_product l-m12px-0">

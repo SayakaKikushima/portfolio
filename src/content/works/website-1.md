@@ -4,8 +4,8 @@ category: website
 urlName: '1'
 order: 60
 thumbnail: /img/portfoliosite/portfoliosite-pc.jpg
-thumbnailAlt: Portpfolio site Sayaka Kikushima
-cardLead: Portpfolio site
+thumbnailAlt: Portfolio site Sayaka Kikushima
+cardLead: Portfolio site
 cardTitle: Sayaka Kikushima
 fv:
   sp: /img/portfoliosite/portfoliosite-sp.jpg
@@ -35,7 +35,7 @@ infoHtml: |-
   <figcaption></figcaption>
   </figure>
   <dd class="u-txtlp12">
-                                      写真撮影やレタリングなど自分のアイデンティティであるアナログの表現を大切にしながら変化の激しい時代でも素直に目を傾け受け取りながらクリエイティブを生み出す姿勢を表しました。
+                                      写真撮影やレタリングなど自分のアイデンティティであるアナログの表現を大切にしながら変化の激しい時代でも素直に耳を傾け受け取りながらクリエイティブを生み出す姿勢を表しました。
                                   </dd>
   <figure class="l-works_product_container l-m24px-0">
   <img alt="portfoliosite-caption2" src="/img/portfoliosite/portfoliosite-caprion2.jpg"/>
@@ -48,7 +48,7 @@ infoHtml: |-
   <dd class="u-txtlp12">
   <ul>
   <li>作品を邪魔しないことを前提にグレーをベースカラーとした配色、シンプルなレイアウトを意識しました。</li>
-  <li>文字間を取り、アニメーションもユーザービリティを保ちながら適度に加えゆったりとした印象を与えました。</li>
+  <li>文字間を取り、アニメーションもユーザビリティを保ちながら適度に加えゆったりとした印象を与えました。</li>
   <li>オリジナルのロゴを制作し、ロゴの一部をハンバーガーボタンやPAGETOPボタンに使用することでVIを保つデザインにしました。
                                           </li>
   </ul>

@@ -14,7 +14,7 @@ fv:
   imageAlt: 新卒向けITエンジニア就活サービスユニゾンキャリア 公式LINEリッチメニュー
 caption: |-
   Client:株式会社ユニゾン・テクノロジー様
-  計５ページ
+  計5ページ
 infoHtml: |-
   <dl>
   <dt class="u-txtlp24">Application</dt>

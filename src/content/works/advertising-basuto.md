@@ -7,7 +7,7 @@ urlName: basuto
 order: 50
 thumbnail: /img/okinawa/okinawa.png
 thumbnailAlt: わった〜バス党インスタグラムフォトコンテストの投稿用バナーの写真
-cardLead: 沖縄県わった～バス党実行委員会
+cardLead: 沖縄県わった〜バス党実行委員会
 cardTitle: インスタグラムフォトコンテスト
 fv:
   sp: /img/okinawa/okinawa_sp_pc.png
@@ -23,7 +23,7 @@ info:
   text: コピーライティング、ラフスケッチ、イメージ提案、イラスト・写真選定、ビジュアル制作
 - label: Outline
   text: |-
-    沖縄県のバスの利用を促進を目的としたフォトコンテストを紹介するフィード投稿を作成しました。
+    沖縄県のバスの利用促進を目的としたフォトコンテストを紹介するフィード投稿を作成しました。
     目的:コンテスト参加者数の増加
 - label: Target
   text: 10代〜60代 沖縄県在住の男性/女性

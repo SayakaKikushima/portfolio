@@ -39,12 +39,12 @@ infoHtml: |-
                                       <br/>目的:住宅展示場の予約数増加
                                   </dd>
   <dt class="u-txtlp24">Target</dt>
-  <dd class="u-txtlp12">50~60代の子育てが終わり、子供が巣立った夫婦世代、第二の人生を検討している年齢層
+  <dd class="u-txtlp12">50〜60代の子育てが終わり、子供が巣立った夫婦世代、第二の人生を検討している年齢層
                                   </dd>
   <dt class="u-txtlp24">Design details</dt>
   <dd class="u-txtlp12">
   <ul>
-  <li>ブランディング目的のLPと特殊だったため、CVを狙うのではなくいかに販売する住宅を魅了的かつ、四季工房の大切にしているメッセージを伝えていくのかを重視しデザインを制作
+  <li>ブランディング目的という特殊なLPだったため、CVを狙うのではなくいかに販売する住宅を魅力的かつ、四季工房の大切にしているメッセージを伝えていくのかを重視しデザインを制作
                                           </li>
   <li>大きく写真を使った構図、段々と写真とキャッチコピーが表示されるような時間軸をみせ、ゆったりとした暮らしをイメージしました。</li>
   <li>全体として極端なあしらいの使用を避け、落ち着いた配色、漆喰のテクスチャを用いることで、高級感が漂う雰囲気が伝わるようデザインをしました。
@@ -53,7 +53,7 @@ infoHtml: |-
   </ul>
   </dd>
   <figure class="l-works_product_container l-m24px-0">
-  <img alt="portfoliosite-caption1" src="/img/shikikobo/shikikobo_lp_detail.png"/>
+  <img alt="株式会社四季工房様住宅展示場LPのデザインカンプ" src="/img/shikikobo/shikikobo_lp_detail.png"/>
   <figcaption></figcaption>
   </figure>
   </dl>
