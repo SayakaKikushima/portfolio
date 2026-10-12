@@ -65,7 +65,7 @@ infoHtml: |-
   </li>
   <li><a data-lightbox="gallery1" data-title="キャプション" href="/img/photo/photo-museum3.jpg"><img alt="国立新美術館2" src="/img/photo/photo-museum3.jpg"/></a>
   </li>
-  <li><a data-lightbox="gallery1" data-title="キャプション" href="/img/phot/photo-kichijoji2/photo-sora2.jpg"><img alt="吉祥寺の写真" src="/img/photo/photo-kichijoji2.jpg"/></a>
+  <li><a data-lightbox="gallery1" data-title="キャプション" href="/img/photo/photo-kichijoji2.jpg"><img alt="吉祥寺の写真" src="/img/photo/photo-kichijoji2.jpg"/></a>
   </li>
   </ul>
   </dd>

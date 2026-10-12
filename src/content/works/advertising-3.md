@@ -115,10 +115,6 @@ infoHtml: |-
 <figcaption></figcaption>
 </figure>
 <figure class="l-works_product_container">
-<img alt="ユニゾンテクノロジー様求人媒体のアイキャッチ16" src="/img/unison-ad/unison-ad-16.jpg"/>
-<figcaption></figcaption>
-</figure>
-<figure class="l-works_product_container">
 <img alt="ユニゾンテクノロジー様求人媒体のアイキャッチ17" src="/img/unison-ad/unison-ad-17.jpg"/>
 <figcaption></figcaption>
 </figure>
