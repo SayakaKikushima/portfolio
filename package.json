@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SayakaKikushima/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SayakaKikushima/portfolio/issues"
+  },
+  "homepage": "https://github.com/SayakaKikushima/portfolio#readme",
+  "dependencies": {
+    "astro": "^7.3.8"
+  },
+  "type": "module",
+  "private": true
+}

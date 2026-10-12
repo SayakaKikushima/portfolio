@@ -1,0 +1,26 @@
+---
+/**
+ * トップページ・Works一覧の作品カード（タブの中身）。
+ * src/content/works/ の作品データから自動で作られます。
+ */
+import { worksByCategory, workUrl, u, br } from '../lib/site';
+const groups = await worksByCategory();
+---
+<div class="c-tab_contents">
+  {groups.map((g, gi) => (
+    <div id={g.tab} class={gi === 0 ? 'c-tabpanel js-active' : 'c-tabpanel'} role="tabpanel">
+      {g.works.map((w) => (
+        <div class="works_photo_container pointer onclass">
+          <img src={u(w.data.thumbnail ?? w.data.fv.pc ?? w.data.fv.image ?? '')} alt={w.data.thumbnailAlt ?? ''} />
+          <div class="mask">
+            <a href={workUrl(w)}>
+              <div class="caption u-txtlp24">
+                <p><span set:html={br(w.data.cardLead)} /><br /><Fragment set:html={br(w.data.cardTitle ?? w.data.title)} /></p>
+              </div>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  ))}
+</div>

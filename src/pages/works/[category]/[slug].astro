@@ -1,0 +1,123 @@
+---
+/**
+ * 作品ページのテンプレート。全作品がこの1ファイルから作られます。
+ * デザインを変えたいときはここを直せば全作品に反映されます。
+ */
+import { getCollection } from 'astro:content';
+import { CATEGORIES, category, neighbors, workUrl, u, br, withBase, type Work } from '../../../lib/site';
+import Head from '../../../components/Head.astro';
+import Footer from '../../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const works = await getCollection('works');
+  return works.map((work) => ({
+    params: { category: CATEGORIES.find((c) => c.id === work.data.category)!.dir, slug: work.data.urlName },
+    props: { work },
+  }));
+}
+
+const { work } = Astro.props as { work: Work };
+const d = work.data;
+// 移行前の作品は、Design details 部分を本文（---の下）にHTMLのまま持っています
+const legacyHtml = work.body?.trim() ? withBase(work.body) : '';
+const { prev, next } = await neighbors(work);
+const prevUrl = workUrl(prev);
+const nextUrl = workUrl(next);
+const appAlt: Record<string, string> = {
+  figma: 'figmaのアイコン',
+  ai: 'illustratorのアイコン',
+  ps: 'photoshopのアイコン',
+  procreate: 'procreateのアイコン',
+};
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <Head title={d.title.replace(/\n/g, ' ')} fonts="mincho" extraCss={d.extraCss} />
+</head>
+<body class="c-loading">
+  <div class="c-wrap">
+    <header class="l-header_lower fw200">
+      <div class="c-inner_lower  c-shoulder_lower l-m02">
+        <div class="c-hd_logo"><a class="pointer" href={u('/')}><img src={u('/img/portfolio-typo.png')} alt="メインロゴ" /></a></div>
+      </div>
+    </header>
+    <nav class="l-nav_lower">
+      <ul class="l-glb_nav c-inner u-txtlp24">
+        <li><a href={u('/works/')}><span>Works</span></a></li>
+        <li><a href={u('/profile/')}><span>Profile</span></a></li>
+        <li><a href={u('/contact/')}><span>Contact</span></a></li>
+      </ul>
+    </nav>
+    <button class="c-trigger"><span></span></button>
+    <div class="c-cover"></div>
+    <main id="top">
+      <div class="works_details_fv_container">
+        <div class="works_details_photo_container onclass">
+          <a href={prevUrl} class="works_details_prev"></a>
+          {d.fv.sp && <img class="fv_sp" src={u(d.fv.sp)} alt={d.fv.spAlt ?? ''} />}
+          {d.fv.pc && <img class="fv_pc" src={u(d.fv.pc)} alt={d.fv.pcAlt ?? ''} />}
+          {d.fv.image && <img src={u(d.fv.image)} alt={d.fv.imageAlt ?? ''} />}
+          <a href={nextUrl} class="works_details_next"></a>
+        </div>
+        <p class={d.captionSmall ? 'works_caption_lower u-txtlp12' : 'works_caption_lower'} set:html={br(d.caption)} />
+      </div>
+      <div class="c-inner fw200 default">
+        <section class="l-works_details onclass" data-animate="fx08">
+          <div class="l-works_details_container">
+            <div class="works_txt_container_lower">
+              <p class="l-m3212 c-hd_type01_lower u-txtlp24 onclass"><a href={u('/works/')}>{category(d.category).label}</a></p>
+              <h1 class="l-m1202 c-project_title u-txtlp24 default" set:html={br(d.title)} />
+              {(d.apps || d.info) && (
+                <dl>
+                  {d.apps && (
+                    <Fragment>
+                      <dt class="u-txtlp24">Application</dt>
+                      <dd>
+                        <div class="works_app_container">
+                          {d.apps.map((a) => <img src={u(`/img/icon/${a}.svg`)} alt={appAlt[a] ?? `${a}のアイコン`} />)}
+                        </div>
+                      </dd>
+                    </Fragment>
+                  )}
+                  {d.info?.map((i) => (
+                    <Fragment>
+                      <dt class="u-txtlp24">{i.label}</dt>
+                      <dd class="u-txtlp12" set:html={br(i.text)} />
+                    </Fragment>
+                  ))}
+                </dl>
+              )}
+              {d.infoHtml && <Fragment set:html={withBase(d.infoHtml)} />}
+            </div>
+          </div>
+          {d.details && (
+            <dl class="l-works-product_presentation">
+              <dt class="u-txtlp24">Design details</dt>
+              {d.details.map((b) =>
+                'text' in b ? (
+                  <dd class="u-txtlp12" set:html={br(b.text)} />
+                ) : (
+                  <figure class="l-m24px-0">
+                    <img src={u(b.image)} alt={b.alt ?? ''} />
+                    <figcaption set:html={br(b.caption)} />
+                  </figure>
+                ),
+              )}
+            </dl>
+          )}
+          {legacyHtml && <Fragment set:html={legacyHtml} />}
+          <div class="c-button-readmore pointer onclass" data-animate="fx03">
+            <p class="works-details-button u-txtlp24">
+              <a class="works-details-button_prev" href={prevUrl}><span>prev</span></a>
+              <a href={u('/works/')}>Works TOP</a>
+              <a class="works-details-button_next" href={nextUrl}><span>next</span></a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <Footer variant="lower" />
+</body>
+</html>

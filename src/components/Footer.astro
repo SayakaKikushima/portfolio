@@ -1,0 +1,36 @@
+---
+/** 作品ページ共通のフッターと読み込むスクリプト */
+import { u } from '../lib/site';
+const year = new Date().getFullYear();
+---
+<footer class="c-footer_top fw200">
+  <div class="c-contact_container button">
+    <a class="c-contact  pointer" href="mailto:mum.fluorite&#64;gmail.com"><img class="c-contain" src={u('/img/icon/mail.svg')} alt="mailのアイコン" /><span></span></a>
+    <a class="c-return_top  pointer" href="#"><span class=" u-txtlp24 pointer">TOP</span></a>
+  </div>
+  <div class="l-footer_container c-inner">
+    <div class="l-footer_container_inner">
+      <h2 class="l-m45030 u-txtlp48 c-hd_type01">Contact</h2>
+      <div class="l-footer_nav_container u-txtlp24">
+        <div class="l-footer_nav_container_inner u-txtlp24">
+          <div class="l-footer_nav_icon"><img class="c-contain l-footer_icon" src={u('/img/icon/mail.svg')} alt="mailのアイコン" /></div>
+          <p><a href="mailto:mum.fluorite&#64;gmail.com">mum.fluorite@gmail.com</a></p>
+        </div>
+        <div class="l-footer_nav_container_inner u-txtlp24">
+          <div class="u-txtlp24">
+            <div class="l-footer_nav_icon"><img class=" c-contain l-footer_icon" src={u('/img/icon/instagram.svg')} alt="instagramのアイコン" /></div>
+          </div>
+          <div class="u-txtlp24">
+            <p><a href="https://instagram.com/fluorite_syk?igshid=NTc4MTIwNjQ2YQ==" target="_blank">@fluorite_syk</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="c-copy ">&copy;{year} Sayaka Kikushima Portfolio</div>
+</footer>
+<script is:inline src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script is:inline src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+<script is:inline src={u('/js/script.js')}></script>

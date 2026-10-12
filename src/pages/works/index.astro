@@ -1,0 +1,122 @@
+---
+import { u } from '../../lib/site';
+import WorksPanels from '../../components/WorksPanels.astro';
+import Gtm from '../../components/Gtm.astro';
+---
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <Gtm />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link href={u('/css/style.css')} rel="stylesheet" type="text/css">
+    <noscript>
+        <link href={u('/css/noscript.css')} rel="stylesheet" type="text/css">
+    </noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400&family=Sawarabi+Mincho&display=swap"
+        rel="stylesheet">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href={u('/img/favicon/apple-touch-icon.png')}>
+    <link rel="icon" type="image/png" sizes="32x32" href={u('/img/favicon/favicon-32x32.png')}>
+    <link rel="icon" type="image/png" sizes="16x16" href={u('/img/favicon/favicon-16x16.png')}>
+    <link rel="manifest" href={u('/img/favicon/site.webmanifest')}>
+    <link rel="mask-icon" href={u('/img/favicon/safari-pinned-tab.svg')} color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#f5f5f5">
+</head>
+
+<body class="c-loading">
+    <div class="c-wrap">
+        <header class="l-header_lower fw200">
+            <div class="c-inner_lower  c-shoulder_lower l-m02">
+                <div class="c-hd_logo"><a class="pointer" href={u('/')}><img src={u('/img/portfolio-typo.png')}
+                            alt="メインロゴ"></a></div>
+                <ul class="c-hd_nav">
+                    <li><a href="https://instagram.com/fluorite_syk?igshid=NTc4MTIwNjQ2YQ=="
+                            target="_blank"><span></span></a></li>
+                    <li><a href="https://instagram.com/hb_syk?igshid=NTc4MTIwNjQ2YQ==" target="_blank"><span></span></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <nav class="l-nav_lower">
+            <ul class="l-glb_nav c-inner u-txtlp24">
+                <li><a href="#"><span>Works</span></a></li>
+                <li><a href={u('/profile/')}><span>Profile</span></a></li>
+                <li><a href={u('/contact/')}><span>Contact</span></a></li>
+            </ul>
+        </nav>
+        <button class="c-trigger"><span></span></button>
+        <div class="c-cover"></div>
+        <main id="top" class="c-inner fw200">
+            
+            
+            <section class="l-works">
+                <div class="bg-illust">
+                    <img class="c-contain" src={u('/img/s-main.svg')} alt="あしらいのイラスト">
+                </div>
+                <h2 class="l-m3202 u-txtlp48 c-hd_type01 default onclass" data-animate="fx11">
+                    Works
+                </h2>
+                <div class="c-tab onclass" data-animate="fx04">
+                    <ul class="c-tab_list" role="tablist">
+                        <li><button class="c-tab_item u-txtlp24 " role="tab"
+                                aria-controls="tabpanel02"><span></span>Advertising
+                            </button>
+                        </li>
+                        <li><button class="c-tab_item u-txtlp24" role="tab"
+                                aria-controls="tabpanel03"><span></span>Web</button>
+                        </li>
+                        <li><button class="c-tab_item u-txtlp24" role="tab"
+                                aria-controls="tabpanel04"><span></span>Branding
+                            </button></li>
+                        <li><button class="c-tab_item u-txtlp24" role="tab"
+                                aria-controls="tabpanel05"><span>Package</span>
+                            </button>
+                        </li>
+                        <li><button class="c-tab_item u-txtlp24" role="tab"
+                                aria-controls="tabpanel06"><span></span>Other</button>
+                        </li>
+                    </ul>
+                    <WorksPanels />
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="c-footer_top fw200 button">
+        <div class="c-contact_container button pointer">
+            <a class="c-contact " href="mailto:mum.fluorite&#64;gmail.com"><img class="c-contain "
+                    src={u('/img/icon/mail.svg')} alt="mailのアイコン"><span></span></a>
+            <a class="c-return_top " href="#"><span class=" u-txtlp24  ">TOP</span></a>
+        </div>
+        <div class="l-footer_container c-inner  onclass" data-animate="fx04">
+            <div class="l-footer_container_inner">
+                <h2 class="l-m45030 u-txtlp48 c-hd_type01 onclass">Contact</h2>
+                <div class="l-footer_nav_container u-txtlp24">
+                    <div class="l-footer_nav_container_inner u-txtlp24">
+                        <div class="l-footer_nav_icon"><img class="c-contain l-footer_icon" src={u('/img/icon/mail.svg')}
+                                alt="mailのアイコン"></div>
+                        <p><a href="mailto:mum.fluorite&#64;gmail.com">mum.fluorite@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-copy ">&copy;2026 Sayaka
+            Kikushima Portfolio
+        </div>
+    </footer>
+    <script is:inline src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script is:inline src={u('/js/script.js')}></script>
+</body>
+
+</html>
