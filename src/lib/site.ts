@@ -16,7 +16,7 @@ const CHAIN_ORDER = ['advertising', 'website', 'package', 'other', 'branding'];
 
 export const category = (id: string) => CATEGORIES.find((c) => c.id === id)!;
 
-/** /img/... のようなサイト内パスに公開先（/portfolio）を付ける */
+/** /img/... のようなサイト内パスに公開先のパス（GitHub Pages なら /portfolio）を付ける */
 export const u = (path: string) => {
   if (!path || /^(https?:|mailto:|tel:|#|\/\/|data:)/.test(path)) return path;
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');

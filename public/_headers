@@ -1,0 +1,4 @@
+# Cloudflare Pages 用の設定（GitHub Pages では使われません）
+# 画像やPDFも含め、すべてのファイルを検索エンジンにインデックスさせない
+/*
+  X-Robots-Tag: noindex, nofollow, noarchive
