@@ -37,6 +37,8 @@ const works = defineCollection({
     }),
     // メイン画像下のキャプション（Client:◯◯ など）
     caption: z.string().optional(),
+    // 制作したサイトのURL（あればキャプションの下にリンクで表示）
+    siteUrl: z.string().optional(),
     captionSmall: z.boolean().optional(),
 
     // 使用ツール（public/img/icon/◯◯.svg のファイル名）
@@ -46,11 +48,12 @@ const works = defineCollection({
     // 移行前のHTMLをそのまま使う場合（新しい作品では使わなくてOK）
     infoHtml: z.string().optional(),
 
-    // Design details（文章と画像を上から順に）
+    // Design details（文章・箇条書き・画像を上から順に）
     details: z
       .array(
         z.union([
           z.object({ text: z.string() }),
+          z.object({ list: z.array(z.string()) }),
           z.object({ image: z.string(), alt: z.string().optional(), caption: z.string().optional() }),
         ]),
       )

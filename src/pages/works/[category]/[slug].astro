@@ -28,6 +28,7 @@ const appAlt: Record<string, string> = {
   ai: 'illustratorのアイコン',
   ps: 'photoshopのアイコン',
   procreate: 'procreateのアイコン',
+  vscode: 'visualstudiocodeのアイコン',
 };
 ---
 <!DOCTYPE html>
@@ -60,7 +61,15 @@ const appAlt: Record<string, string> = {
           {d.fv.image && <img src={u(d.fv.image)} alt={d.fv.imageAlt ?? ''} />}
           <a href={nextUrl} class="works_details_next"></a>
         </div>
-        <p class={d.captionSmall ? 'works_caption_lower u-txtlp12' : 'works_caption_lower'} set:html={br(d.caption)} />
+        <p class={d.captionSmall ? 'works_caption_lower u-txtlp12' : 'works_caption_lower'}>
+          <Fragment set:html={br(d.caption)} />
+          {d.siteUrl && (
+            <Fragment>
+              {d.caption && <br />}
+              <a class="works_caption_link" href={d.siteUrl}>{d.siteUrl}</a>
+            </Fragment>
+          )}
+        </p>
       </div>
       <div class="c-inner fw200 default">
         <section class="l-works_details onclass" data-animate="fx08">
@@ -97,6 +106,10 @@ const appAlt: Record<string, string> = {
               {d.details.map((b) =>
                 'text' in b ? (
                   <dd class="u-txtlp12" set:html={br(b.text)} />
+                ) : 'list' in b ? (
+                  <dd class="u-txtlp12">
+                    <ul>{b.list.map((li) => <li set:html={br(li)} />)}</ul>
+                  </dd>
                 ) : (
                   <figure class="l-m24px-0">
                     <img src={u(b.image)} alt={b.alt ?? ''} />
