@@ -35,14 +35,19 @@ info:                        # （任意）見出しと本文のペア。見出�
   - label: Target
     text: 20代〜30代女性
 
-details:                     # （任意）Design details。文章・箇条書き・画像を上から順に並べます
-  - text: デザインのポイントを書きます。
-  - list:                    # 箇条書きにしたいとき
-      - ポイント1
-      - ポイント2
-  - image: /img/sample/detail-1.png
-    alt: ◯◯1
-  - image: /img/sample/detail-2.png
-    alt: ◯◯2
-    caption: 画像の下に出る説明（不要なら行ごと消す）
+sections:                    # （任意）Design details と同じ階層の項目。必要なだけ増やせます（上から順に表示）
+  - label: Concept           # 見出しは自由（Concept / Marketing process / Design details / Result など）
+    items:
+      - text: コンセプトを書きます。
+  - label: Design details
+    items:                   # 中身は、文章（text）・箇条書き（list）・画像（image）を上から順に並べます
+      - text: デザインのポイントを書きます。
+      - list:                # 箇条書きにしたいとき
+          - ポイント1
+          - ポイント2
+      - image: /img/sample/detail-1.png
+        alt: ◯◯1
+      - image: /img/sample/detail-2.png
+        alt: ◯◯2
+        caption: 画像の下に出る説明（不要なら行ごと消す）
 ---

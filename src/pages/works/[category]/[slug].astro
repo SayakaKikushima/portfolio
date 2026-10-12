@@ -19,6 +19,8 @@ export async function getStaticPaths() {
 const { work } = Astro.props as { work: Work };
 const d = work.data;
 // 移行前の作品は、Design details 部分を本文（---の下）にHTMLのまま持っています
+// 見出しごとのまとまり（旧形式の details は「Design details」として最後に）
+const sections = [...(d.sections ?? []), ...(d.details ? [{ label: 'Design details', items: d.details }] : [])];
 const legacyHtml = work.body?.trim() ? withBase(work.body) : '';
 const { prev, next } = await neighbors(work);
 const prevUrl = workUrl(prev);
@@ -100,10 +102,10 @@ const appAlt: Record<string, string> = {
               {d.infoHtml && <Fragment set:html={withBase(d.infoHtml)} />}
             </div>
           </div>
-          {d.details && (
+          {sections.map((sec) => (
             <dl class="l-works-product_presentation">
-              <dt class="u-txtlp24">Design details</dt>
-              {d.details.map((b) =>
+              <dt class="u-txtlp24">{sec.label}</dt>
+              {sec.items.map((b) =>
                 'text' in b ? (
                   <dd class="u-txtlp12" set:html={br(b.text)} />
                 ) : 'list' in b ? (
@@ -118,7 +120,7 @@ const appAlt: Record<string, string> = {
                 ),
               )}
             </dl>
-          )}
+          ))}
           {legacyHtml && <Fragment set:html={legacyHtml} />}
           <div class="c-button-readmore pointer onclass" data-animate="fx03">
             <p class="works-details-button u-txtlp24">

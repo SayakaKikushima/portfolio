@@ -31,19 +31,21 @@ info:
       中小企業〜大企業むけ
       経営企画・事業開発担当者の30代〜50代
       市場調、企業調査を目的としながら漠然と何をすればいいのかわからない状態である潜在層
-details:
-  - list:
-      - 公式サービスサイト(https://jp.ub-speeda.com/)やブランドガイドラインに沿いデザインを制作。
-      - 潜在層に合わせてディレクターと共にコンテンツのレイアウトを検討。
-      - キャッチコピーに「その市場本当にせめて大丈夫？」と多少ユーザーを煽るような表現でフックを生み出しユーザーのスクロールを促しました。
-      - サポート体制の情報も中間に掲載し、SaaSの使用経験が浅いユーザーの関心の離脱を防ぐよう工夫しました。
-      - イラストを多用しサービスのUIのイメージがうユーザーへ感覚的に伝わるよう表現しました。
-  - image: /img/uzabase/uzabase_lp_detail_wf.png
-    alt: 株式会社ユーザベース様経済情報プラットフォーム「Speeda」LPのワイヤーフレーム
-  - image: /img/uzabase/uzabase_lp_detail.png
-    alt: 株式会社ユーザベース様経済情報プラットフォーム「Speeda」LPのデザインカンプ
-  - image: /img/uzabase/uzabase_lp_detail_2.png
-    alt: 株式会社ユーザベース様経済情報プラットフォーム「Speeda」LPのデザインカンプの詳細1
-  - image: /img/uzabase/uzabase_lp_detail_3.png
-    alt: 株式会社ユーザベース様経済情報プラットフォーム「Speeda」LPのデザインカンプの詳細2
+sections:
+  - label: Design details
+    items:
+      - list:
+          - 公式サービスサイト(https://jp.ub-speeda.com/)やブランドガイドラインに沿いデザインを制作。
+          - 潜在層に合わせてディレクターと共にコンテンツのレイアウトを検討。
+          - キャッチコピーに「その市場本当にせめて大丈夫？」と多少ユーザーを煽るような表現でフックを生み出しユーザーのスクロールを促しました。
+          - サポート体制の情報も中間に掲載し、SaaSの使用経験が浅いユーザーの関心の離脱を防ぐよう工夫しました。
+          - イラストを多用しサービスのUIのイメージがうユーザーへ感覚的に伝わるよう表現しました。
+      - image: /img/uzabase/uzabase_lp_detail_wf.png
+        alt: 株式会社ユーザベース様経済情報プラットフォーム「Speeda」LPのワイヤーフレーム
+      - image: /img/uzabase/uzabase_lp_detail.png
+        alt: 株式会社ユーザベース様経済情報プラットフォーム「Speeda」LPのデザインカンプ
+      - image: /img/uzabase/uzabase_lp_detail_2.png
+        alt: 株式会社ユーザベース様経済情報プラットフォーム「Speeda」LPのデザインカンプの詳細1
+      - image: /img/uzabase/uzabase_lp_detail_3.png
+        alt: 株式会社ユーザベース様経済情報プラットフォーム「Speeda」LPのデザインカンプの詳細2
 ---
