@@ -28,19 +28,21 @@ info:
     目的:ダウンロード数の増加
 - label: Target
   text: 20代〜60代男性/女性
-details:
-- text: 広いターゲットであり、特に高齢者を対象としていたため、視認性の高いフォントや配色を使用してデザインをしました。
-- text: 機能性の高さを訴求するため、アプリ内のUIを強調して見せる表現を取り入れました。
-- image: /img/nihonchozai/nihonchozai_detail_1.png
-  alt: お薬手帳アプリ「お薬手帳プラス」バナー1
-- image: /img/nihonchozai/nihonchozai_detail_2.png
-  alt: お薬手帳アプリ「お薬手帳プラス」バナー2
-- image: /img/nihonchozai/nihonchozai_detail_3.png
-  alt: お薬手帳アプリ「お薬手帳プラス」バナー3
-- image: /img/nihonchozai/nihonchozai_detail_4.png
-  alt: お薬手帳アプリ「お薬手帳プラス」バナー4
-- image: /img/nihonchozai/nihonchozai_detail_5.png
-  alt: お薬手帳アプリ「お薬手帳プラス」バナー5
-- image: /img/nihonchozai/nihonchozai_detail_6.png
-  alt: お薬手帳アプリ「お薬手帳プラス」バナー6
+sections:
+  - label: Design details
+    items:
+    - text: 広いターゲットであり、特に高齢者を対象としていたため、視認性の高いフォントや配色を使用してデザインをしました。
+    - text: 機能性の高さを訴求するため、アプリ内のUIを強調して見せる表現を取り入れました。
+    - image: /img/nihonchozai/nihonchozai_detail_1.png
+      alt: お薬手帳アプリ「お薬手帳プラス」バナー1
+    - image: /img/nihonchozai/nihonchozai_detail_2.png
+      alt: お薬手帳アプリ「お薬手帳プラス」バナー2
+    - image: /img/nihonchozai/nihonchozai_detail_3.png
+      alt: お薬手帳アプリ「お薬手帳プラス」バナー3
+    - image: /img/nihonchozai/nihonchozai_detail_4.png
+      alt: お薬手帳アプリ「お薬手帳プラス」バナー4
+    - image: /img/nihonchozai/nihonchozai_detail_5.png
+      alt: お薬手帳アプリ「お薬手帳プラス」バナー5
+    - image: /img/nihonchozai/nihonchozai_detail_6.png
+      alt: お薬手帳アプリ「お薬手帳プラス」バナー6
 ---
