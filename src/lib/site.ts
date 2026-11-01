@@ -4,8 +4,8 @@ export type Work = CollectionEntry<'works'>;
 
 /** カテゴリの設定。tab はトップ/Works一覧のタブのID、dir はURLのフォルダ名 */
 export const CATEGORIES = [
-  { id: 'advertising', dir: 'advertising', label: 'Advertising', tab: 'tabpanel02' },
   { id: 'website', dir: 'website', label: 'Web', tab: 'tabpanel03' },
+  { id: 'advertising', dir: 'advertising', label: 'Advertising', tab: 'tabpanel02' },
   { id: 'branding', dir: 'branddesign', label: 'BrandDesign', tab: 'tabpanel04' },
   { id: 'package', dir: 'packagedesgin', label: 'PackageDesign', tab: 'tabpanel05' },
   { id: 'other', dir: 'other', label: 'Other', tab: 'tabpanel06' },

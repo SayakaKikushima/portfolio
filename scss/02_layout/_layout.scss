@@ -465,6 +465,7 @@ header > .c-inner {
         height: 100dvh;
         width: 100dvw;
         position: relative;
+        overflow-x: clip; // 背景画像の横のはみ出しだけ隠す（下へのはみ出しは見せる）
         //animation: slider 10s linear infinite;*/
         .l-kv-photo {
             position: relative;
@@ -497,7 +498,7 @@ main {
         text-align: right;
         font-size: 0.75rem;
         padding-right: 2rem;
-        letter-spacing: 1.2px;
+        letter-spacing: 0.04em;
         @include v.mq(m) {
             font-size: 0.95rem;
         }
@@ -660,10 +661,9 @@ main {
             font-size: 14px;
             margin-top: 0.25rem;
             //letter-spacing: 0.05rem;
-            line-height: 22px;
+            line-height: 1.5;
             @include v.mq(m) {
                 font-size: 1rem;
-                line-height: 30px;
             }
             &:last-child {
                 margin-bottom: 40px;
@@ -685,8 +685,8 @@ main {
             li {
                 margin-top: 0.75rem;
                 //margin-bottom: 2rem;
-                letter-spacing: 0.05rem;
-                line-height: 20px;
+                letter-spacing: 0.04em;
+                line-height: 1.5;
                 &:nth-child(1) {
                     margin-top: 0.25rem;
                 }
@@ -818,6 +818,23 @@ main {
             }
         }
     }
+
+    // 横並び（PCでは横に、スマホでは縦に並ぶ）
+    .l-works_row {
+        display: grid;
+        gap: 1.5rem;
+        @include v.mq(ml) {
+            grid-auto-flow: column;
+            grid-auto-columns: 1fr;
+            align-items: center;
+        }
+        &_txt {
+            font-size: 14px;
+            @include v.mq(m) {
+                font-size: 1rem;
+            }
+        }
+    }
 }
 
 .l-logocaption {
@@ -889,7 +906,7 @@ main {
         }
     }
     p {
-        line-height: 1.5rem;
+        line-height: 1.5;
     }
 }
 

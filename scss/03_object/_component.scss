@@ -418,7 +418,6 @@
         width: 90%;
         margin: 0 3rem;
         //padding: 0.35rem 1rem;
-        background: #fff;
         &-top {
             @extend .message-logo;
             //padding: 1.5rem 1rem;
@@ -469,16 +468,14 @@
         }
         text-align: center;
         font-size: 14px;
-        line-height: 28px; /* 225% */
-        letter-spacing: 1.2px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
         //margin: 2.5rem 0 0 0;
         @include v.mq(m) {
             font-size: 1rem;
-            line-height: 36px; /* 225% */
         }
         @include v.mq(m) {
             font-size: 1rem;
-            line-height: 36px; /* 225% */
         }
     }
 }
@@ -622,8 +619,8 @@
         .l-about-contents_container_txt {
             font-size: 14px;
             text-align: justify;
-            line-height: 24px; /* 171.429% */
-            letter-spacing: 0.7px;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
             margin: 2rem 0dvw 0 0dvw;
             @include v.mq(ml) {
                 padding: 0 0 1rem 2rem;

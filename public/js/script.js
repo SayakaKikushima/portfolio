@@ -185,104 +185,13 @@ $(function () {
 
 //slick
 $(function () {
-        $('#slick01').slick({
-                dots: false,
-                infinite: true,
-                speed: 400,//500,
-                fade: true,
-                cssEase: 'linear',
-                autoplay: true,
-                autoplaySpeed: 3000,//4500,
-                arrows: false
-        });
-        $('#slick02').slick({
+        // 作品ページのスライダー（作品データの slider で作られる）
+        $('.js-works-slider').slick({
                 dots: false,
                 infinite: true,
                 speed: 500,
                 fade: true,
                 cssEase: 'linear',
-                //autoplay: true,
-                //autoplaySpeed: 3700,
-                arrows: true
-        });
-        $('#slick03').slick({
-                dots: false,
-                infinite: true,
-                speed: 500,
-                fade: true,
-                cssEase: 'linear',
-                //autoplay: true,
-                //autoplaySpeed: 3700,
-                arrows: true
-        });
-        $('#slick04').slick({
-                dots: false,
-                infinite: true,
-                speed: 500,
-                fade: true,
-                cssEase: 'linear',
-                //autoplay: true,
-                //autoplaySpeed: 3700,
-                arrows: true
-        });
-        $('#slick05').slick({
-                dots: false,
-                infinite: true,
-                speed: 500,
-                fade: true,
-                cssEase: 'linear',
-                //autoplay: true,
-                //autoplaySpeed: 3700,
-                arrows: true
-        });
-        $('#slick06').slick({
-                dots: false,
-                infinite: true,
-                speed: 500,
-                fade: true,
-                cssEase: 'linear',
-                //autoplay: true,
-                //autoplaySpeed: 3700,
-                arrows: true
-        });
-        $('#slick07').slick({
-                dots: false,
-                infinite: true,
-                speed: 500,
-                fade: true,
-                cssEase: 'linear',
-                //autoplay: true,
-                //autoplaySpeed: 3700,
-                arrows: true
-        });
-        $('#slick08').slick({
-                dots: false,
-                infinite: true,
-                speed: 500,
-                fade: true,
-                cssEase: 'linear',
-                //autoplay: true,
-                //autoplaySpeed: 3700,
-                arrows: true
-        });
-        $('#slick09').slick({
-                dots: false,
-                infinite: true,
-                speed: 500,
-                fade: true,
-                cssEase: 'linear',
-                //autoplay: true,
-                //autoplaySpeed: 3700,
-                arrows: true
-        });
-        $('#slick10').slick({
-                dots: false,
-                infinite: true,
-                speed: 500,
-                fade: true,
-                cssEase: 'linear',
-                //autoplay: true,
-                //autoplaySpeed: 3700,
                 arrows: true
         });
 });

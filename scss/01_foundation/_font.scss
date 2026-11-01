@@ -37,14 +37,40 @@
     line-height: 1.5;
 }*/
 
+// 約物の詰め（YakuHanJP）。和文（Zen Kaku Gothic New）に合わせ、細字（100〜300）も Regular で表示する
+$yakuhan-weights: (100: Regular, 200: Regular, 300: Regular, 400: Regular, 500: Medium, 600: SemiBold, 700: Bold, 800: ExtraBold, 900: Black);
+@each $w, $file in $yakuhan-weights {
+    @font-face {
+        font-family: YakuHanJP;
+        font-style: normal;
+        font-weight: $w;
+        font-display: swap;
+        src: url("https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/fonts/YakuHanJP/YakuHanJP-#{$file}.woff2") format("woff2");
+        unicode-range: U+3001,U+3002,U+3008,U+3009,U+300a,U+300b,U+300c,U+300d,U+300e,U+300f,U+3010,U+3011,U+3014,U+3015,U+30fb,U+ff01,U+ff08,U+ff09,U+ff1a,U+ff1b,U+ff1f,U+ff3b,U+ff3d,U+ff5b,U+ff5d;
+    }
+}
+
 body {
-    font-family: YakuHanJP, "Mukta Mahee", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: YakuHanJP, "Mukta Mahee", "Zen Kaku Gothic New", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
     font-feature-settings: "palt" 1;
     font-variant-ligatures: none;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
     //font-family: YakuHanJP, "Mukta Mahee", "Osaka Mono";
     //font-family: "Sawarabi Mincho", serif; //"Original Yu mincho",
     //font-family: "Sawarabi Mincho", serif;
     /*h2 {
         font-family: "Cinzel", serif !important;
     }*/
+}
+
+// 見出しは本文の行間・文字間隔の対象外
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.15;
+    letter-spacing: normal;
 }

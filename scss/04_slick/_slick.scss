@@ -30,13 +30,7 @@
         cursor: hand;
     }
 }
-#slick02 > .slick-list {
-    @include v.mq(trigger) {
-        max-width: 100dvw;
-        //margin: 0 auto;
-    }
-}
-#slick02 > .slick-list {
+.js-works-slider > .slick-list {
     @include v.mq(trigger) {
         max-width: 85dvw;
         margin: 0 auto;

@@ -18,8 +18,7 @@ import Gtm from '../components/Gtm.astro';
     </noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/css/yakuhanjp.css">
-    <link href="https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
     
     <link rel="apple-touch-icon" sizes="180x180" href={u('/img/favicon/apple-touch-icon.png')}>
     <link rel="icon" type="image/png" sizes="32x32" href={u('/img/favicon/favicon-32x32.png')}>
@@ -56,18 +55,9 @@ import Gtm from '../components/Gtm.astro';
     </nav>
     <div class="c-cover"></div>
     <div class="l-kv">
-        <div class="l-kv-photo-container" id="slick01">
+        <div class="l-kv-photo-container">
             <div class="l-kv-photo">
                 <img src={u('/img/kv-photo/kv.png')} alt="kvの背景写真1">
-            </div>
-            <div class="l-kv-photo">
-                <img src={u('/img/kv-photo/kv-2.png')} alt="kvの背景写真2">
-            </div>
-            <div class="l-kv-photo">
-                <img src={u('/img/kv-photo/kv.png')} alt="kvの背景写真1">
-            </div>
-            <div class="l-kv-photo">
-                <img src={u('/img/kv-photo/kv-2.png')} alt="kvの背景写真2">
             </div>
         </div>
     </div>
@@ -103,12 +93,12 @@ import Gtm from '../components/Gtm.astro';
             </h2>
             <div class="c-tab onclass" data-animate="fx04">
                 <ul class="c-tab_list" role="tablist">
+                    <li><button class="c-tab_item u-txtlp24" role="tab"
+                            aria-controls="tabpanel03"><span></span>Web</button>
+                    </li>
                     <li><button class="c-tab_item u-txtlp24 " role="tab"
                             aria-controls="tabpanel02"><span></span>Advertising
                         </button>
-                    </li>
-                    <li><button class="c-tab_item u-txtlp24" role="tab"
-                            aria-controls="tabpanel03"><span></span>Web</button>
                     </li>
                     <li><button class="c-tab_item u-txtlp24" role="tab" aria-controls="tabpanel04"><span></span>Branding
                         </button></li>
@@ -197,7 +187,7 @@ import Gtm from '../components/Gtm.astro';
                         <div class="l-about-contents_container_txt">
                             <p class="about_txt">
                                 2000年生まれ | 東京都出身 | 神奈川県・宮城県育ち<br>
-                                趣味 : チョコミント探し | お菓子・パン作り | 喫茶店・建物巡り | 雲を眺める | K-pop
+                                趣味 : チョコミント探し | お菓子・パン作り | 喫茶店・建物巡り | 音楽・ポッドキャスト
                             </p>
                             <p class="about_txt l-m100">専修大学商学部マーケティング学科卒業
                                 大学卒業後<br>東京デザインプレックス研究所
@@ -205,7 +195,8 @@ import Gtm from '../components/Gtm.astro';
                             </p>
                             <p class="about_txt l-m100">
                                 インターンとして、エンジニアの人材紹介会社にてオウンドメディア運用、バナーのデザインを担当後、
-                                デジタルマーケティング会社にデザイナーとして入社。<br>Webサイト、LP、バナー、DTPと幅広くデザインのディレクションおよび制作を担当。
+                                デジタルマーケティング事業およびマーケターの複業マッチングプラットフォーム事業を展開する会社にて、Webサイト、LP、バナー、DTPと幅広くディレクションおよび制作を担当。<br>
+                                その後、スポットワークのマッチングプラットフォーム事業の会社にて、UIUXデザイン、ブランドデザインを含めコミュニケーションデザインを担当しています。
                             </p>
                         </div>
                         <div class="l-contents_container_skill_icon ">

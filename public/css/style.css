@@ -413,15 +413,101 @@ th {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
 }*/
+/* 約物の詰め（YakuHanJP）。和文（Zen Kaku Gothic New）に合わせ、細字（100〜300）も Regular で表示する */
+@font-face {
+  font-family: YakuHanJP;
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/fonts/YakuHanJP/YakuHanJP-Regular.woff2") format("woff2");
+  unicode-range: U+3001,U+3002,U+3008,U+3009,U+300a,U+300b,U+300c,U+300d,U+300e,U+300f,U+3010,U+3011,U+3014,U+3015,U+30fb,U+ff01,U+ff08,U+ff09,U+ff1a,U+ff1b,U+ff1f,U+ff3b,U+ff3d,U+ff5b,U+ff5d;
+}
+@font-face {
+  font-family: YakuHanJP;
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/fonts/YakuHanJP/YakuHanJP-Regular.woff2") format("woff2");
+  unicode-range: U+3001,U+3002,U+3008,U+3009,U+300a,U+300b,U+300c,U+300d,U+300e,U+300f,U+3010,U+3011,U+3014,U+3015,U+30fb,U+ff01,U+ff08,U+ff09,U+ff1a,U+ff1b,U+ff1f,U+ff3b,U+ff3d,U+ff5b,U+ff5d;
+}
+@font-face {
+  font-family: YakuHanJP;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/fonts/YakuHanJP/YakuHanJP-Regular.woff2") format("woff2");
+  unicode-range: U+3001,U+3002,U+3008,U+3009,U+300a,U+300b,U+300c,U+300d,U+300e,U+300f,U+3010,U+3011,U+3014,U+3015,U+30fb,U+ff01,U+ff08,U+ff09,U+ff1a,U+ff1b,U+ff1f,U+ff3b,U+ff3d,U+ff5b,U+ff5d;
+}
+@font-face {
+  font-family: YakuHanJP;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/fonts/YakuHanJP/YakuHanJP-Regular.woff2") format("woff2");
+  unicode-range: U+3001,U+3002,U+3008,U+3009,U+300a,U+300b,U+300c,U+300d,U+300e,U+300f,U+3010,U+3011,U+3014,U+3015,U+30fb,U+ff01,U+ff08,U+ff09,U+ff1a,U+ff1b,U+ff1f,U+ff3b,U+ff3d,U+ff5b,U+ff5d;
+}
+@font-face {
+  font-family: YakuHanJP;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/fonts/YakuHanJP/YakuHanJP-Medium.woff2") format("woff2");
+  unicode-range: U+3001,U+3002,U+3008,U+3009,U+300a,U+300b,U+300c,U+300d,U+300e,U+300f,U+3010,U+3011,U+3014,U+3015,U+30fb,U+ff01,U+ff08,U+ff09,U+ff1a,U+ff1b,U+ff1f,U+ff3b,U+ff3d,U+ff5b,U+ff5d;
+}
+@font-face {
+  font-family: YakuHanJP;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/fonts/YakuHanJP/YakuHanJP-SemiBold.woff2") format("woff2");
+  unicode-range: U+3001,U+3002,U+3008,U+3009,U+300a,U+300b,U+300c,U+300d,U+300e,U+300f,U+3010,U+3011,U+3014,U+3015,U+30fb,U+ff01,U+ff08,U+ff09,U+ff1a,U+ff1b,U+ff1f,U+ff3b,U+ff3d,U+ff5b,U+ff5d;
+}
+@font-face {
+  font-family: YakuHanJP;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/fonts/YakuHanJP/YakuHanJP-Bold.woff2") format("woff2");
+  unicode-range: U+3001,U+3002,U+3008,U+3009,U+300a,U+300b,U+300c,U+300d,U+300e,U+300f,U+3010,U+3011,U+3014,U+3015,U+30fb,U+ff01,U+ff08,U+ff09,U+ff1a,U+ff1b,U+ff1f,U+ff3b,U+ff3d,U+ff5b,U+ff5d;
+}
+@font-face {
+  font-family: YakuHanJP;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/fonts/YakuHanJP/YakuHanJP-ExtraBold.woff2") format("woff2");
+  unicode-range: U+3001,U+3002,U+3008,U+3009,U+300a,U+300b,U+300c,U+300d,U+300e,U+300f,U+3010,U+3011,U+3014,U+3015,U+30fb,U+ff01,U+ff08,U+ff09,U+ff1a,U+ff1b,U+ff1f,U+ff3b,U+ff3d,U+ff5b,U+ff5d;
+}
+@font-face {
+  font-family: YakuHanJP;
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/fonts/YakuHanJP/YakuHanJP-Black.woff2") format("woff2");
+  unicode-range: U+3001,U+3002,U+3008,U+3009,U+300a,U+300b,U+300c,U+300d,U+300e,U+300f,U+3010,U+3011,U+3014,U+3015,U+30fb,U+ff01,U+ff08,U+ff09,U+ff1a,U+ff1b,U+ff1f,U+ff3b,U+ff3d,U+ff5b,U+ff5d;
+}
+
 body {
-  font-family: YakuHanJP, "Mukta Mahee", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: YakuHanJP, "Mukta Mahee", "Zen Kaku Gothic New", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   -webkit-font-feature-settings: "palt" 1;
           font-feature-settings: "palt" 1;
   -webkit-font-variant-ligatures: none;
           font-variant-ligatures: none;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   /*h2 {
       font-family: "Cinzel", serif !important;
   }*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.15;
+  letter-spacing: normal;
 }
 
 img {
@@ -1699,6 +1785,7 @@ header > .c-inner .l-kv-logo_container img, header > .c-inner_lower .l-kv-logo_c
   height: 100dvh;
   width: 100dvw;
   position: relative;
+  overflow-x: clip;
 }
 .l-kv .l-kv-photo-container .l-kv-photo, .l-kv_profile .l-kv-photo-container .l-kv-photo {
   position: relative;
@@ -1719,7 +1806,7 @@ main {
   text-align: right;
   font-size: 0.75rem;
   padding-right: 2rem;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.04em;
 }
 @media (min-width: 740px) {
   .works_caption_lower {
@@ -1909,12 +1996,11 @@ main {
 .l-works dl dd, .l-works_details dl dd {
   font-size: 14px;
   margin-top: 0.25rem;
-  line-height: 22px;
+  line-height: 1.5;
 }
 @media (min-width: 740px) {
   .l-works dl dd, .l-works_details dl dd {
     font-size: 1rem;
-    line-height: 30px;
   }
 }
 .l-works dl dd:last-child, .l-works_details dl dd:last-child {
@@ -1938,8 +2024,8 @@ main {
 }
 .l-works dl ul li, .l-works_details dl ul li {
   margin-top: 0.75rem;
-  letter-spacing: 0.05rem;
-  line-height: 20px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
 }
 .l-works dl ul li:nth-child(1), .l-works_details dl ul li:nth-child(1) {
   margin-top: 0.25rem;
@@ -2093,6 +2179,26 @@ main {
   }
 }
 
+.l-works .l-works_row, .l-works_details .l-works_row {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 860px) {
+  .l-works .l-works_row, .l-works_details .l-works_row {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+  }
+}
+.l-works .l-works_row_txt, .l-works_details .l-works_row_txt {
+  font-size: 14px;
+}
+@media (min-width: 740px) {
+  .l-works .l-works_row_txt, .l-works_details .l-works_row_txt {
+    font-size: 1rem;
+  }
+}
+
 .l-logocaption {
   margin: 0 auto;
 }
@@ -2182,7 +2288,7 @@ main {
   height: 100%;
 }
 .l-contact p {
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 
 .l-works-fv {
@@ -2924,7 +3030,6 @@ main {
 .c-designtheme .message-logo, .c-designtheme .message-logo-top {
   width: 90%;
   margin: 0 3rem;
-  background: #fff;
 }
 .c-designtheme .message-logo-top {
   background: transparent;
@@ -2968,8 +3073,8 @@ main {
 .c-designtheme .message-caption {
   text-align: center;
   font-size: 14px;
-  line-height: 28px; /* 225% */
-  letter-spacing: 1.2px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 .c-designtheme .message-caption span {
   font-weight: 300;
@@ -2978,13 +3083,11 @@ main {
 @media (min-width: 740px) {
   .c-designtheme .message-caption {
     font-size: 1rem;
-    line-height: 36px; /* 225% */
   }
 }
 @media (min-width: 740px) {
   .c-designtheme .message-caption {
     font-size: 1rem;
-    line-height: 36px; /* 225% */
   }
 }
 
@@ -3129,8 +3232,8 @@ main {
 .c-about .l-about_container .l-about-contents_container_txt {
   font-size: 14px;
   text-align: justify;
-  line-height: 24px; /* 171.429% */
-  letter-spacing: 0.7px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   margin: 2rem 0dvw 0 0dvw;
 }
 @media (min-width: 860px) {
@@ -4422,13 +4525,7 @@ main {
 }
 
 @media (max-width: 859px) {
-  #slick02 > .slick-list {
-    max-width: 100dvw;
-  }
-}
-
-@media (max-width: 859px) {
-  #slick02 > .slick-list {
+  .js-works-slider > .slick-list {
     max-width: 85dvw;
     margin: 0 auto;
   }
