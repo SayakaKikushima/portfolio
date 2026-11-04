@@ -142,6 +142,10 @@ const appAlt: Record<string, string> = {
                           ),
                         )}
                       </div>
+                    ) : 'embed' in b ? (
+                      <figure class="l-m24px-0">
+                        <iframe class="l-works_embed" src={b.embed} title={b.title} loading="lazy" allowfullscreen />
+                      </figure>
                     ) : (
                       <figure class="l-m24px-0">
                         <img src={u(b.image)} alt={b.alt ?? ''} />

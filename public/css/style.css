@@ -2198,6 +2198,12 @@ main {
     font-size: 1rem;
   }
 }
+.l-works .l-works_embed, .l-works_details .l-works_embed {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/10;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 .l-logocaption {
   margin: 0 auto;

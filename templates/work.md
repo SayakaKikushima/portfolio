@@ -61,6 +61,8 @@ process:                                         # 工夫した点・プロセ�
       - text: |-
           画像の横に並べる文章
           改行もできます
+  - embed: https://embed.figma.com/design/...   # Figmaなどの埋め込み（他の画像と同じ16:10）
+    title: ◯◯のFigmaデザイン                  # 読み上げ用の説明
 
 # sections:                  # （任意）上の見出しに当てはまらないまとまり。最後に表示されます
 #   - label: 見出し

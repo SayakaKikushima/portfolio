@@ -835,6 +835,14 @@ main {
             }
         }
     }
+
+    // Figmaなどの埋め込み（他の画像と同じ16:10）
+    .l-works_embed {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
 }
 
 .l-logocaption {

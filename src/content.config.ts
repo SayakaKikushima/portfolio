@@ -8,7 +8,7 @@ import { z } from 'astro/zod';
  */
 const image = z.object({ image: z.string(), alt: z.string().optional(), caption: z.string().optional() });
 
-/** 見出しの中に並べる要素：文章・箇条書き・画像・キャッチコピー・スライダー・横並び */
+/** 見出しの中に並べる要素：文章・箇条書き・画像・キャッチコピー・スライダー・横並び・埋め込み */
 const block = z.union([
   z.object({ text: z.string() }),
   z.object({ list: z.array(z.string()) }),
@@ -19,6 +19,8 @@ const block = z.union([
   z.object({ slider: z.array(image) }),
   // 横並び（PCでは横に、スマホでは縦に並ぶ）。中身は画像か文章
   z.object({ row: z.array(z.union([image, z.object({ text: z.string() })])) }),
+  // Figmaなどの埋め込み（他の画像と同じ16:10で表示）。title は読み上げ用の説明
+  z.object({ embed: z.string(), title: z.string() }),
 ]);
 
 /** 見出しの中身。文章だけなら1行で書け、画像や箇条書きを混ぜるときは block を並べる */
